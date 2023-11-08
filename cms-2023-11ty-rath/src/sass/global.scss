@@ -1,0 +1,28 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: 'Source Sans Pro';
+}
+
+body {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Reset button styling */
+button {
+  all: unset;
+  display: var(--nav-button-display, flex);
+  position: relative;
+}
+
+
+$myOrange: #d5874c;
+$myDarkGray: #363636;
+$iconGray: #595959;
+$iconNumberGray: #d5d5d5;
+$aboutBg: #FFF7F2;

@@ -1,0 +1,757 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+ *    v2.0 | 20110126
+ *       License: none (public domain)
+ *       */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/fonts/fonts/SourceSans3-VariableFont_wght.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/fonts/SourceSansPro-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 200;
+  src: url("/fonts/fonts/SourceSansPro-ExtraLight.otf") format("opentype");
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/fonts/SourceSansPro-Semibold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/fonts/fonts/SourceSansPro-It.otf") format("opentype");
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/fonts/fonts/SourceSansPro-Black.otf") format("opentype");
+}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.show {
+  display: block;
+  visibility: visible;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Source Sans Pro";
+}
+
+body {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Reset button styling */
+button {
+  all: unset;
+  display: var(--nav-button-display, flex);
+  position: relative;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+main a.button {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  line-height: 38px;
+  width: 16rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: solid 1px #f4a76c;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#workshops {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+#workshops #workshop-intro-text {
+  margin: 2rem;
+  margin-top: 4rem;
+}
+#workshops #workshop-intro-text .super-headline {
+  color: #363636;
+  font-weight: 600;
+}
+#workshops p {
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+}
+#workshops h2 {
+  color: #d5874c;
+  font-size: 28px;
+  font-weight: 300;
+}
+#workshops .level {
+  position: relative;
+  padding: 2rem;
+  padding-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background-color: #363636;
+  color: white;
+}
+#workshops .level .mobile-level-number {
+  display: none;
+}
+#workshops .level .dancer-container {
+  top: -3rem;
+  position: absolute;
+  align-self: center;
+}
+#workshops .level .dancer-container .dancer-icon {
+  position: relative;
+  align-self: center;
+  padding: 2rem;
+  background-color: #595959;
+  border-radius: 100%;
+  height: fit-content;
+  width: fit-content;
+  z-index: 100;
+}
+#workshops .level .dancer-container .dancer-icon img {
+  height: 6rem;
+}
+#workshops .level .dancer-container .level-number {
+  display: flex;
+  position: absolute;
+  top: -1.3rem;
+  right: -1.3rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 100%;
+  z-index: 99;
+  background-color: #d5d5d5;
+}
+#workshops .level .dancer-container .level-number p {
+  align-self: center;
+  align-content: center;
+  margin: auto;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #d5874c;
+}
+#workshops .level > img:first-child {
+  margin-bottom: 30px;
+}
+#workshops .level > img,
+#workshops .level blockquote {
+  align-self: center;
+}
+#workshops .level h3 {
+  color: #d5874c;
+  font-size: 22px;
+  font-weight: 300;
+}
+#workshops .level .quote-container {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#workshops .level .quote-sign {
+  align-self: center;
+  color: #595959;
+  font-size: 10rem;
+  font-weight: 800;
+  margin-top: -5rem;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #d5874c;
+}
+#workshops .level .level-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+#workshops .level a.button {
+  width: 12rem;
+}
+#workshops .level blockquote {
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+@media (min-width: 37.5rem) {
+  #workshops {
+    gap: 2rem;
+  }
+  #workshops .super-headline {
+    font-size: 0.8rem;
+  }
+  #workshops h2 {
+    font-size: 3rem;
+  }
+  #workshops .level {
+    width: 55rem;
+    padding: 2rem;
+    align-items: center;
+    margin-left: 6rem;
+  }
+  #workshops .level .mobile-level-number {
+    position: absolute;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 12rem;
+    color: #363636;
+    left: -5.4rem;
+  }
+  #workshops .level .dancer-container {
+    position: relative;
+    margin: auto;
+    top: 0;
+  }
+  #workshops .level .dancer-container .level-number {
+    display: none;
+  }
+  #workshops .level:nth-child(even) {
+    flex-direction: row;
+  }
+  #workshops .level:nth-child(even) .quote-container {
+    flex-direction: column-reverse;
+  }
+  #workshops .level:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  #workshops .level:nth-child(odd) .quote-container {
+    flex-direction: column;
+  }
+  #workshops .level:nth-child(2) {
+    margin-right: 1rem;
+    align-self: flex-end;
+  }
+  #workshops .level:nth-child(2) .mobile-level-number {
+    top: -2.5rem;
+  }
+  #workshops .level:nth-child(3) {
+    align-self: center;
+  }
+  #workshops .level:nth-child(4) {
+    margin-right: 23rem;
+    align-self: flex-start;
+  }
+  #workshops .level:nth-child(4) .mobile-level-number {
+    bottom: -1.75rem;
+  }
+}
+
+#about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  background-color: #FFF7F2;
+}
+#about #marcus-portrait {
+  height: 35rem;
+  overflow: hidden;
+}
+#about #marcus-portrait img {
+  height: 50rem;
+}
+#about #about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+#about #about-text .super-headline {
+  margin-bottom: 0.5rem;
+  font-family: "Source Sans Pro" !important;
+}
+#about .super-headline {
+  font-size: 1rem;
+  font-weight: 600;
+}
+#about h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #d5874c;
+  font-family: "Source Sans Pro";
+}
+#about a.button {
+  font-family: "Source Sans Pro";
+  text-decoration: none;
+  color: #363636;
+  display: inline-block;
+  line-height: 2.5rem;
+  width: 16rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: solid 1px #f4a76c;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 4rem;
+}
+@media (min-width: 37.5rem) {
+  #about {
+    flex-direction: row;
+    padding: 2rem;
+  }
+  #about h2 {
+    font-size: 3rem;
+  }
+  #about #marcus-portrait {
+    width: 190rem;
+  }
+  #about #about-text p {
+    line-height: 1.8rem;
+    color: #595959;
+  }
+}
+
+#news {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+}
+#news .super-headline {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #595959;
+}
+#news h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #d5874c;
+}
+#news h3 {
+  align-self: center;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #d5874c;
+}
+#news .articles-row {
+  display: flex;
+  gap: 2rem;
+  overflow: scroll;
+}
+#news article {
+  width: 26rem;
+  background-color: #FFF7F2;
+  color: #595959;
+}
+#news article .article-image-container {
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+}
+#news article img {
+  height: 100%;
+}
+#news article p {
+  margin: 2rem 1rem 2rem 1rem;
+  line-height: 1.8rem;
+}
+#news a.button {
+  text-decoration: none;
+  color: #363636;
+  display: inline-block;
+  line-height: 2.5rem;
+  width: 10rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: solid 1px #f4a76c;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 1rem;
+  margin-bottom: 4rem;
+}
+@media (min-width: 37.5rem) {
+  #news .articles-row {
+    display: flex;
+    gap: 2rem;
+    overflow: scroll;
+    justify-content: space-between;
+  }
+  #news h2 {
+    font-size: 3rem;
+  }
+}
+
+footer {
+  font-family: "Source Sans Pro";
+  background-color: #363636;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+footer h4 {
+  font-size: 1.5rem;
+}
+footer p {
+  font-size: 1rem;
+}
+footer a {
+  font-size: 1rem;
+  color: #d5874c;
+  text-decoration: none;
+}
+@media (min-width: 37.5rem) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+header {
+  font-family: "Source Sans Pro";
+  padding: 1rem;
+  display: flex;
+  height: 40rem;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/DANCE_-_Grupo_de_Rua%2C_%22Inoah%2C%22_at_Brooklyn_Academy_of_Music_%2849020288773%29.jpg/1024px-DANCE_-_Grupo_de_Rua%2C_%22Inoah%2C%22_at_Brooklyn_Academy_of_Music_%2849020288773%29.jpg");
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position-x: center;
+  /* Hide the list on narrow viewports, if it comes after an element with
+   aria-expanded set to "false". */
+}
+header * {
+  color: white;
+  text-decoration: none;
+}
+header #topbar {
+  display: flex;
+  justify-content: space-between;
+}
+header nav button {
+  width: 40px;
+  height: 40px;
+}
+header h2 {
+  color: #d5874c;
+  font-size: 2.5rem;
+  font-family: "Source Sans Pro";
+}
+header strong {
+  font-weight: 600;
+}
+header #hero-text {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-right: 60px;
+  margin-bottom: 60px;
+}
+header a.button {
+  display: inline-block;
+  line-height: 2.5rem;
+  width: 17.5rem;
+  height: 2.5rem;
+  font-family: "Source Sans Pro";
+  font-size: 1rem;
+  font-weight: 600;
+  border: solid 1px #f4a76c;
+  text-align: center;
+  vertical-align: middle;
+}
+header #mainnav {
+  position: var(--nav-position, fixed);
+  inset-block-start: 1rem;
+  inset-inline-end: 1rem;
+  z-index: 200;
+}
+header [aria-expanded=false] + ul {
+  visibility: var(--nav-list-visibility, hidden);
+}
+header #burger-top {
+  background-color: #d5874c;
+  height: 0.1rem;
+  width: 80%;
+  align-self: flex-end;
+}
+header #burger-bottom {
+  background-color: #d5874c;
+  height: 0.1rem;
+  width: 50%;
+  align-self: flex-end;
+}
+header #mainnav button {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+header #mainnav button:hover {
+  cursor: pointer;
+}
+header #mainnav ul {
+  background: #363636;
+  box-shadow: var(--nav-list-shadow, -5px 0 11px 0 rgba(0, 0, 0, 0.2));
+  display: flex;
+  flex-direction: var(--nav-list-layout, column);
+  flex-wrap: wrap;
+  gap: 2rem;
+  height: var(--nav-list-height, 100vh);
+  list-style: none;
+  margin: 0;
+  align-items: flex-end;
+  padding: var(--nav-list-padding, 2rem);
+  position: var(--nav-list-position, fixed);
+  inset-block-start: 0;
+  /* Logical property. Equivalent to top: 0; */
+  inset-inline-end: 0;
+  /* Logical property. Equivalent to right: 0; */
+  width: var(--nav-list-width, min(22rem, 100vw));
+  padding-top: 5rem !important;
+}
+header #mainnav ul a {
+  font-size: 1.5rem;
+}
+header [aria-expanded=false] + ul {
+  opacity: 0;
+  visibility: var(--nav-list-visibility, hidden);
+}
+header button[aria-expanded=true] #burger-top {
+  width: 100%;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin-top: 22.5px;
+}
+header button[aria-expanded=true] #burger-bottom {
+  width: 100%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-top: -10px;
+}
+header button div {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+header #mainnav button {
+  z-index: 201;
+}
+@media (min-width: 37.5rem) {
+  header {
+    padding: 2rem;
+    background-position-x: 35rem;
+  }
+  header nav {
+    --nav-button-display: none;
+    --nav-position: static;
+  }
+  header #mainnav button {
+    display: none;
+  }
+  header #mainnav ul {
+    padding: 0 !important;
+    background: transparent;
+    --nav-list-layout: row;
+    --nav-list-position: static;
+    --nav-list-padding: 0;
+    --nav-list-height: auto;
+    --nav-list-width: 100%;
+    --nav-list-shadow: none;
+  }
+  header #mainnav ul a {
+    font-size: 1.2rem !important;
+  }
+  header h2 {
+    font-size: 3rem;
+  }
+  header ul {
+    display: flex;
+    gap: 2rem;
+  }
+  header ul a {
+    color: #d5874c;
+    font-weight: 600;
+    text-decoration: underline #d5874c;
+  }
+  header #hero-text {
+    align-self: flex-start;
+    margin-left: 10rem;
+    margin-bottom: 20rem;
+  }
+  header #hero-text a.button {
+    width: 12rem;
+  }
+  header #hero-text br {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  header ul {
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55), visibility 0.3s linear;
+  }
+}
+header [aria-expanded=false] + ul {
+  transform: var(--nav-list-transform, translateX(100%));
+  visibility: var(--nav-list-visibility, hidden);
+}
+
+/*# sourceMappingURL=style.css.map */

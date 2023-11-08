@@ -1,0 +1,80 @@
+#about {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+    background-color: #FFF7F2;
+
+    #marcus-portrait {
+        height: 35rem;
+        overflow: hidden;
+
+        img {
+            height: 50rem;
+        }
+    }
+
+    #about-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+        .super-headline {
+            margin-bottom: 0.5rem;
+            font-family: 'Source Sans Pro' !important;
+        }
+    }
+
+    .super-headline {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 300;
+        color: $myOrange;
+        font-family: 'Source Sans Pro';
+    }
+
+    a.button {
+        font-family: 'Source Sans Pro';
+        text-decoration: none;
+        color: $myDarkGray;
+        display: inline-block;
+        line-height: 2.5rem;
+        width: 16rem;
+        height: 2.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border: solid 1px #f4a76c;
+        text-align: center;
+        vertical-align: middle;
+        margin-bottom: 4rem;
+    }
+
+    @include breakpoint($desktop) {
+        flex-direction: row;
+        padding: 2rem;
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        #marcus-portrait {
+            width: 190rem;
+        }
+
+        #about-text {
+            p {
+                line-height: 1.8rem;
+                color: $iconGray;
+            }
+        }
+
+    }
+}

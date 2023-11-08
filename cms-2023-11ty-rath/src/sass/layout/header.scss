@@ -1,0 +1,226 @@
+header {
+  font-family: 'Source Sans Pro';
+  padding: 1rem;
+  display: flex;
+  height: 40rem;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/DANCE_-_Grupo_de_Rua%2C_%22Inoah%2C%22_at_Brooklyn_Academy_of_Music_%2849020288773%29.jpg/1024px-DANCE_-_Grupo_de_Rua%2C_%22Inoah%2C%22_at_Brooklyn_Academy_of_Music_%2849020288773%29.jpg");
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position-x: center;
+
+  * {
+    color: white;
+    text-decoration: none;
+  }
+
+  #topbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav {
+    button {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  h2 {
+    color: #d5874c;
+    font-size: 2.5rem;
+    font-family: 'Source Sans Pro';
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  #hero-text {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right: 60px;
+    margin-bottom: 60px;
+  }
+
+  a.button {
+    display: inline-block;
+    line-height: 2.5rem;
+    width: 17.5rem;
+    height: 2.5rem;
+    font-family: 'Source Sans Pro';
+    font-size: 1rem;
+    font-weight: 600;
+    border: solid 1px #f4a76c;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  #mainnav {
+    position: var(--nav-position, fixed);
+    inset-block-start: 1rem;
+    inset-inline-end: 1rem;
+    z-index: 200;
+  }
+
+  /* Hide the list on narrow viewports, if it comes after an element with
+   aria-expanded set to "false". */
+  [aria-expanded="false"]+ul {
+    visibility: var(--nav-list-visibility, hidden);
+  }
+
+  #burger-top {
+    background-color: $myOrange;
+    height: 0.1rem;
+    width: 80%;
+    align-self: flex-end;
+  }
+
+  #burger-bottom {
+    background-color: $myOrange;
+    height: 0.1rem;
+    width: 50%;
+    align-self: flex-end;
+  }
+
+  #mainnav button {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #mainnav button:hover {
+    cursor: pointer;
+  }
+
+  #mainnav ul {
+    background: $myDarkGray;
+    box-shadow: var(--nav-list-shadow, -5px 0 11px 0 rgb(0 0 0 / 0.2));
+    display: flex;
+    flex-direction: var(--nav-list-layout, column);
+    flex-wrap: wrap;
+    gap: 2rem;
+    height: var(--nav-list-height, 100vh);
+    list-style: none;
+    margin: 0;
+    align-items: flex-end;
+    padding: var(--nav-list-padding, 2rem);
+    position: var(--nav-list-position, fixed);
+    inset-block-start: 0;
+    /* Logical property. Equivalent to top: 0; */
+    inset-inline-end: 0;
+    /* Logical property. Equivalent to right: 0; */
+    width: var(--nav-list-width, min(22rem, 100vw));
+    padding-top: 5rem !important;
+  }
+
+  #mainnav ul a {
+    font-size: 1.5rem;
+  }
+
+
+  [aria-expanded="false"]+ul {
+    opacity: 0;
+    visibility: var(--nav-list-visibility, hidden);
+  }
+
+  button[aria-expanded="true"] #burger-top {
+    width: 100%;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-top: 22.5px;
+  }
+
+  button[aria-expanded="true"] #burger-bottom {
+    width: 100%;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: -10px;
+  }
+
+  button div {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+  #mainnav button {
+    z-index: 201;
+  }
+
+
+  @include breakpoint($desktop) {
+    padding: 2rem;
+    background-position-x: 35rem;
+
+    nav {
+      --nav-button-display: none;
+      --nav-position: static;
+    }
+
+    #mainnav button {
+      display: none;
+    }
+
+    #mainnav ul {
+      padding: 0 !important;
+      background: transparent;
+      --nav-list-layout: row;
+      --nav-list-position: static;
+      --nav-list-padding: 0;
+      --nav-list-height: auto;
+      --nav-list-width: 100%;
+      --nav-list-shadow: none;
+    }
+
+    #mainnav ul a {
+      font-size: 1.2rem !important;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    ul {
+      display: flex;
+      gap: 2rem;
+
+      a {
+        color: $myOrange;
+        font-weight: 600;
+        text-decoration: underline $myOrange;
+      }
+
+    }
+
+    #hero-text {
+      align-self: flex-start;
+      margin-left: 10rem;
+      margin-bottom: 20rem;
+
+      a.button {
+        width: 12rem;
+      }
+
+      br {
+        display: none;
+      }
+
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    ul {
+      transition: transform 0.6s cubic-bezier(.68, -0.55, .27, 1.55), visibility 0.3s linear;
+    }
+  }
+
+  [aria-expanded="false"]+ul {
+    transform: var(--nav-list-transform, translateX(100%));
+    visibility: var(--nav-list-visibility, hidden);
+  }
+
+}

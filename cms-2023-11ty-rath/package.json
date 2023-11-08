@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "browser-sync": "^2.29.3",
+    "esbuild": "^0.19.4",
+    "sass": "^1.69.2"
+  },
+  "dependencies": {
+    "url-encode-decode": "^1.0.0"
+  }
+}

@@ -1,0 +1,155 @@
+---
+layout: primary
+---
+
+<main>
+      <section id="workshops">
+        <div id="workshop-intro-text">
+          <p class="super-headline">
+            FIND YOUR ENTRANCE LEVEL & BOOK A WORKSHOP WITH MARCUS
+          </p>
+          <h2>If you never start, you will never know.</h2>
+        </div>
+
+        <div class="level">
+          <p class="mobile-level-number">3</p>
+          <div class="dancer-container">
+            <div class="dancer-icon">
+              <img
+                src="./images/stretch.svg"
+                alt="Icon showing dancer stretching her leg up to her nose."
+              />
+            </div>
+            <div class="level-number">
+              <p>3</p>
+            </div>
+          </div>
+          <div class="level-text">
+            <h3>As pro as you can get</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. .
+            </p>
+            <a href="#" class="button">BOOK WORKSHOP</a>
+          </div>
+          <div class="quote-container">
+            <p class="quote-sign">,,</p>
+            <blockquote>Respect your talent!</blockquote>
+          </div>
+        </div>
+
+        <div class="level">
+          <p class="mobile-level-number">2</p>
+          <div class="dancer-container">
+            <div class="dancer-icon">
+              <img
+                src="./images/up.svg"
+                alt="Icon showing dancer stretching her leg up to her nose."
+              />
+            </div>
+            <div class="level-number">
+              <p>2</p>
+            </div>
+          </div>
+          <div class="level-text">
+            <h3>As pro as you can get</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua.
+            </p>
+            <a href="#" class="button">BOOK WORKSHOP</a>
+          </div>
+          <div class="quote-container">
+            <p class="quote-sign">,,</p>
+            <blockquote>Thank yourself for leveling up now!</blockquote>
+          </div>
+        </div>
+
+        <div class="level">
+          <p class="mobile-level-number">1</p>
+          <div class="dancer-container">
+            <div class="dancer-icon">
+              <img
+                src="./images/rise.svg"
+                alt="Icon showing dancer stretching her leg up to her nose."
+              />
+            </div>
+            <div class="level-number">
+              <p>1</p>
+            </div>
+          </div>
+          <div class="level-text">
+            <h3>As pro as you can get</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. .
+            </p>
+            <a href="#" class="button">BOOK WORKSHOP</a>
+          </div>
+          <div class="quote-container">
+            <p class="quote-sign">,,</p>
+            <blockquote>Fall in love with dancing!</blockquote>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <div id="marcus-portrait">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Cheng_Tsung_Lung.jpg/1024px-Cheng_Tsung_Lung.jpg"
+            alt="Marcus G. Miller portrait image"
+          />
+        </div>
+
+        <div id="about-text">
+          <div>
+            <p class="super-headline">WHY I TEACH</p>
+            <h2>Hi, I'm Marcus!</h2>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+            itaque incidunt, nihil, recusandae autem aut perferendis reiciendis
+            a neque veniam quibusdam animi ex tempora reprehenderit, aspernatur
+            asperiores consequatur consectetur ipsum!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+            itaque incidunt, nihil, recusandae autem aut perferendis reiciendis
+            a neque veniam quibusdam animi ex tempora reprehenderit, aspernatur
+            asperiores consequatur consectetur ipsum! Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Placeat itaque incidunt, nihil,
+            recusandae autem aut perferendis reiciendis a neque veniam quibusdam
+            animi ex tempora reprehenderit, aspernatur asperiores consequatur
+            consectetur ipsum!
+          </p>
+
+          <a class="button">LEARN MORE</a>
+        </div>
+      </section>
+
+      <section id="news">
+        <div>
+          <p class="super-headline">MAKING WAVES SINCE 2004</p>
+          <h2>In the News</h2>
+        </div>
+
+        <div class="articles-row">
+            {% assign news = collections.news | reverse %}
+            {% for n in news limit:3 %}
+            <article>
+                <h3> {{n.data.title}}</h3> 
+                <div class="article-image-container">
+                  <img
+                src="{{n.data.image-url}}"
+                alt="{{n.data.alt}}"
+                />
+                </div>
+                <p>{{ n.data.text }}</p>
+                <a href="#" class="button">READ MORE</a>
+            </article>
+            {% endfor %}
+        </div>
+      </section>
+    </main>
